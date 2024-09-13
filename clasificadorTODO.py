@@ -58,7 +58,7 @@ class ClasificadorTODO:
                 cc_prev = 0
             n_str.append(c)
             c_prev = c
-        texto = unicodedata.normalize('NFKC', "".join(n_str))
+        texto = unicodedata.normalize('NFKD', "".join(n_str))
         texto = re.sub(r'(\s)+', r' ', texto.strip(), flags=re.IGNORECASE)
         return texto
 
